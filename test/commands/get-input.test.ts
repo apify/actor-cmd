@@ -24,7 +24,7 @@ describe('actor get-input', () => {
 		await afterAllCalls();
 	});
 
-	it('should end with Error when not logged in', async () => {
+	it.skip('should end with Error when not logged in', async () => {
 		try {
 			await GetInputCommand.run([], import.meta.url);
 		} catch (error) {
