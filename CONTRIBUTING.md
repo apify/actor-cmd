@@ -86,15 +86,15 @@ import { writeFile } from "node:fs/promises";
 const ACTOR_NAME = "owo";
 
 const {
-  beforeAllCalls,
-  afterAllCalls,
-  joinPath,
-  toggleCwdBetweenFullAndParentPath,
+	beforeAllCalls,
+	afterAllCalls,
+	joinPath,
+	toggleCwdBetweenFullAndParentPath,
 } = useTempPath(ACTOR_NAME, {
-  cwd: true,
-  cwdParent: true,
-  create: true,
-  remove: true,
+	cwd: true,
+	cwdParent: true,
+	create: true,
+	remove: true,
 });
 
 const { CreateCommand } = await import("../../src/commands/create.js");
@@ -102,14 +102,14 @@ const { PushCommand } = await import("../../src/commands/push.js");
 const { CallCommand } = await import("../../src/commands/call.js");
 
 beforeAll(async () => {
-  await beforeAllCalls();
+	await beforeAllCalls();
 
-  await CreateCommand.run(
-    [ACTOR_NAME, "--template", "project_empty", "--skip-dependency-install"],
-    import.meta.url,
-  );
+	await CreateCommand.run(
+		[ACTOR_NAME, "--template", "project_empty", "--skip-dependency-install"],
+		import.meta.url,
+	);
 
-  const code = `
+	const code = `
 import { Actor } from 'apify';
 
 Actor.main(async () => {
@@ -117,15 +117,15 @@ Actor.main(async () => {
     console.log('Done!');
 });`;
 
-  await writeFile(joinPath("main.js"), code);
+	await writeFile(joinPath("main.js"), code);
 
-  toggleCwdBetweenFullAndParentPath();
+	toggleCwdBetweenFullAndParentPath();
 
-  await PushCommand.run(["--no-prompt"], import.meta.url);
+	await PushCommand.run(["--no-prompt"], import.meta.url);
 });
 
 afterAll(async () => {
-  await afterAllCalls();
+	await afterAllCalls();
 });
 ```
 
