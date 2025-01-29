@@ -1,6 +1,6 @@
 {
 	"name": "actor-cmd",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Actor command-line interface (CLI) helps you work with the Apify Actors.",
 	"exports": "./dist/index.js",
 	"types": "./dist/index.d.ts",
