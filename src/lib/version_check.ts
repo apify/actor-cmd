@@ -15,9 +15,9 @@ const INSTALLATION_TYPE = {
 } as const;
 
 const UPDATE_COMMAND = {
-	[INSTALLATION_TYPE.HOMEBREW]: 'brew update && brew upgrade actor-cli',
-	[INSTALLATION_TYPE.NPM]: 'npm install -g actor-cli@latest',
-	[INSTALLATION_TYPE.VOLTA]: 'volta install actor-cli@latest',
+	[INSTALLATION_TYPE.HOMEBREW]: 'brew update && brew upgrade actor-cmd',
+	[INSTALLATION_TYPE.NPM]: 'npm install -g actor-cmd@latest',
+	[INSTALLATION_TYPE.VOLTA]: 'volta install actor-cmd@latest',
 } as const;
 
 export const SKIP_UPDATE_CHECK =
@@ -38,7 +38,7 @@ export const detectInstallationType = () => {
 	}
 
 	if (commandPath) {
-		// If the real command path is like `/opt/homebrew/Cellar/actor-cli/...` or `/home/linuxbrew/.linuxbrew/Cellar/actor-cli/...`,
+		// If the real command path is like `/opt/homebrew/Cellar/actor-cmd/...` or `/home/linuxbrew/.linuxbrew/Cellar/actor-cmd/...`,
 		// then the CLI is installed via Homebrew
 		if (process.platform === 'linux' || process.platform === 'darwin') {
 			const realCommandPath = realpathSync(commandPath);
@@ -54,7 +54,7 @@ export const detectInstallationType = () => {
 };
 
 export const getLatestNpmVersion = async () => {
-	const response = await axios({ url: 'https://registry.npmjs.org/actor-cli/latest' });
+	const response = await axios({ url: 'https://registry.npmjs.org/actor-cmd/latest' });
 	const latestVersion = response.data.version;
 	return latestVersion as string;
 };

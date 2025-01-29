@@ -1,7 +1,7 @@
 # Actor command-line interface (Actor CLI)
 
-<a href="https://www.npmjs.com/package/actor-cli"><img src="https://badge.fury.io/js/actor-cli.svg" alt="npm version" loading="lazy" style="display:inherit;" /></a>
-<a href="https://travis-ci.com/apify/actor-cli?branch=master"><img src="https://travis-ci.com/apify/actor-cli.svg?branch=master" loading="lazy" alt="Build Status" style="display:inherit;" /></a>
+<a href="https://www.npmjs.com/package/actor-cmd"><img src="https://badge.fury.io/js/actor-cmd.svg" alt="npm version" loading="lazy" style="display:inherit;" /></a>
+<a href="https://travis-ci.com/apify/actor-cmd?branch=master"><img src="https://travis-ci.com/apify/actor-cmd.svg?branch=master" loading="lazy" alt="Build Status" style="display:inherit;" /></a>
 
 ...
 
@@ -12,7 +12,7 @@
 On macOS (or Linux), you can install the Actor CLI via the [Homebrew package manager](https://brew.sh).
 
 ```bash
-brew install actor-cli
+brew install actor-cmd
 ```
 
 ### Via NPM
@@ -27,13 +27,13 @@ npm --version
 Install or upgrade Actor CLI by running:
 
 ```bash
-npm -g install actor-cli
+npm -g install actor-cmd
 ```
 
 If you receive an `EACCES` error, you might need to run the command as root:
 
 ```bash
-sudo npm -g install actor-cli
+sudo npm -g install actor-cmd
 ```
 
 Alternatively, you can use [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm) and install Actor CLI only into a selected user-level Node version without requiring root privileges:
@@ -41,7 +41,7 @@ Alternatively, you can use [Node Version Manager (nvm)](https://github.com/nvm-s
 ```
 nvm install 20
 nvm use 20
-npm -g install actor-cli
+npm -g install actor-cmd
 ```
 
 Finally, verify that Actor CLI was installed correctly by running:
@@ -53,10 +53,10 @@ apify --version
 which should print something like:
 
 ```
-actor-cli/0.10.0 darwin-x64 node-v20.14.2
+actor-cmd/0.10.0 darwin-x64 node-v20.14.2
 ```
 
-> You can also skip the manual global installation altogether and use `npx actor-cli` with all the following commands instead.
+> You can also skip the manual global installation altogether and use `npx actor-cmd` with all the following commands instead.
 
 ## Basic usage
 
@@ -105,7 +105,7 @@ DESCRIPTION
   Gets the Actor input value from the default key-value store associated with the Actor run.
 ```
 
-_See code: [src/commands/get-input.ts](https://github.com/apify/actor-cli/blob/v0.0.1/src/commands/get-input.ts)_
+_See code: [src/commands/get-input.ts](https://github.com/apify/actor-cmd/blob/v0.0.1/src/commands/get-input.ts)_
 
 ## `actor get-value KEY`
 
@@ -122,7 +122,7 @@ DESCRIPTION
   Gets a value from the default key-value store associated with the Actor run.
 ```
 
-_See code: [src/commands/get-value.ts](https://github.com/apify/actor-cli/blob/v0.0.1/src/commands/get-value.ts)_
+_See code: [src/commands/get-value.ts](https://github.com/apify/actor-cmd/blob/v0.0.1/src/commands/get-value.ts)_
 
 ## `actor help [COMMAND]`
 
@@ -165,7 +165,7 @@ DESCRIPTION
   $ cat ./test.json | actor push-data
 ```
 
-_See code: [src/commands/push-data.ts](https://github.com/apify/actor-cli/blob/v0.0.1/src/commands/push-data.ts)_
+_See code: [src/commands/push-data.ts](https://github.com/apify/actor-cmd/blob/v0.0.1/src/commands/push-data.ts)_
 
 ## `actor set-value KEY [VALUE]`
 
@@ -197,6 +197,6 @@ DESCRIPTION
   $ cat ./my-text-file.txt | actor set-value KEY --contentType text/plain
 ```
 
-_See code: [src/commands/set-value.ts](https://github.com/apify/actor-cli/blob/v0.0.1/src/commands/set-value.ts)_
+_See code: [src/commands/set-value.ts](https://github.com/apify/actor-cmd/blob/v0.0.1/src/commands/set-value.ts)_
 <!-- commandsstop -->
 <!-- prettier-ignore-end -->

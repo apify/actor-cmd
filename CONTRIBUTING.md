@@ -1,4 +1,4 @@
-# Contributing to actor-cli
+# Contributing to actor-cmd
 
 ## Dev mode
 
@@ -7,7 +7,7 @@ You can call `./bin/dev.sh` to run the CLI in development mode. This will use th
 ## Tests
 
 Tests are implemented using the [Vitest](https://vitest.dev/) framework.
-You need to have Apify account to test all actor-cli features.
+You need to have Apify account to test all actor-cmd features.
 
 Then you can run tests with commands in repository root directory:
 
@@ -19,7 +19,7 @@ Then you can run tests with commands in repository root directory:
 
 ## Publish new version
 
-Only users with access to [actor-cli package](https://www.npmjs.com/package/actor-cli) can publish new version.
+Only users with access to [actor-cmd package](https://www.npmjs.com/package/actor-cmd) can publish new version.
 
 Release of new versions is managed by GitHub Actions. On pushes to the master branch, prerelease versions are automatically produced. Latest releases are triggered manually through the GitHub release tool. After creating a release there, Actions will automatically produce the latest version of the package.
 

@@ -3890,9 +3890,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"actor-cli@workspace:.":
+"actor-cmd@workspace:.":
   version: 0.0.0-use.local
-  resolution: "actor-cli@workspace:."
+  resolution: "actor-cmd@workspace:."
   dependencies:
     "@apify/actor-templates": "npm:^0.1.5"
     "@apify/consts": "npm:^2.36.0"

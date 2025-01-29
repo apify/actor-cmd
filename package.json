@@ -1,172 +1,174 @@
 {
-    "name": "actor-cmd",
-    "version": "0.0.1",
-    "description": "Actor command-line interface (CLI) helps you work with the Apify Actors.",
-    "exports": "./dist/index.js",
-    "types": "./dist/index.d.ts",
-    "type": "module",
-    "scripts": {
-        "dev": "tsx ./bin/dev.js",
-        "test": "vitest run",
-        "test-python": "vitest run -t '.*\\[python\\]'",
-        "lint": "eslint src test .yarn/plugins --ext .ts,.cjs,.mjs",
-        "lint:fix": "eslint src test .yarn/plugins --fix --ext .ts,.cjs,.mjs",
-        "format": "biome format . && prettier --check \"**/*.{md,yml,yaml}\"",
-        "format:fix": "biome format --write . && prettier --write \"**/*.{md,yml,yaml}\"",
-        "clean": "rimraf dist",
-        "build": "yarn clean && tsc && tsc -p tsconfig.typechecking.json",
-        "update-docs": "oclif readme --readme-path=docs/reference.md",
-        "postinstallDev": "yarn build && node ./bin/run.js check-version"
-    },
-    "files": [
-        "dist",
-        "oclif.manifest.json",
-        "bin"
-    ],
-    "bin": {
-        "actor": "./bin/run.js"
-    },
-    "contributors": [
-        "Martin Adámek <martin@apify.com>"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/apify/actor-cli.git"
-    },
-    "keywords": [
-        "apify",
-        "actor",
-        "client",
-        "node",
-        "command",
-        "line",
-        "bash"
-    ],
-    "author": {
-        "name": "Apify",
-        "email": "support@apify.com",
-        "url": "https://apify.com"
-    },
-    "license": "Apache-2.0",
-    "bugs": {
-        "url": "https://github.com/apify/actor-cli/issues"
-    },
-    "homepage": "https://github.com/apify/actor-cli#readme",
-    "engines": {
-        "node": ">=20"
-    },
-    "dependencies": {
-        "@apify/actor-templates": "^0.1.5",
-        "@apify/consts": "^2.36.0",
-        "@apify/input_schema": "^3.12.0",
-        "@apify/utilities": "^2.12.0",
-        "@crawlee/memory-storage": "^3.12.0",
-        "@oclif/core": "~4.2.0",
-        "@oclif/plugin-help": "~6.2.8",
-        "@root/walk": "~1.1.0",
-        "@sapphire/duration": "^1.1.2",
-        "@sapphire/timestamp": "^1.0.3",
-        "adm-zip": "~0.5.15",
-        "ajv": "~8.17.1",
-        "apify-client": "^2.11.0",
-        "archiver": "~7.0.1",
-        "axios": "~1.7.3",
-        "chalk": "~5.4.0",
-        "cli-table3": "^0.6.5",
-        "computer-name": "~0.1.0",
-        "configparser": "~0.3.10",
-        "cors": "~2.8.5",
-        "detect-indent": "~7.0.1",
-        "escape-string-regexp": "~5.0.0",
-        "express": "~4.21.0",
-        "fs-extra": "^11.2.0",
-        "globby": "~14.0.2",
-        "handlebars": "~4.7.8",
-        "inquirer": "~12.3.0",
-        "is-ci": "~4.1.0",
-        "is-online": "~11.0.0",
-        "istextorbinary": "~9.5.0",
-        "jju": "~1.4.0",
-        "load-json-file": "~7.0.1",
-        "lodash.clonedeep": "^4.5.0",
-        "mime": "~4.0.4",
-        "mixpanel": "~0.18.0",
-        "open": "~10.1.0",
-        "ow": "~2.0.0",
-        "rimraf": "~6.0.1",
-        "semver": "~7.6.3",
-        "tiged": "~2.12.7",
-        "underscore": "~1.13.7",
-        "write-json-file": "~6.0.0"
-    },
-    "devDependencies": {
-        "@apify/eslint-config": "^0.4.0",
-        "@apify/eslint-config-ts": "^0.4.1",
-        "@apify/tsconfig": "^0.1.0",
-        "@biomejs/biome": "^1.8.3",
-        "@crawlee/types": "^3.11.1",
-        "@oclif/test": "^4.0.8",
-        "@sapphire/result": "^2.6.6",
-        "@types/adm-zip": "^0.5.5",
-        "@types/archiver": "^6.0.2",
-        "@types/chai": "^4.3.17",
-        "@types/cors": "^2.8.17",
-        "@types/express": "^4.17.21",
-        "@types/fs-extra": "^11",
-        "@types/inquirer": "^9.0.7",
-        "@types/is-ci": "^3.0.4",
-        "@types/jju": "^1.4.5",
-        "@types/lodash.clonedeep": "^4",
-        "@types/mime": "^4.0.0",
-        "@types/node": "^22.0.0",
-        "@types/semver": "^7.5.8",
-        "@types/underscore": "^1.11.15",
-        "@typescript-eslint/eslint-plugin": "^7.0.2",
-        "@typescript-eslint/parser": "^7.0.2",
-        "@yarnpkg/core": "^4.1.2",
-        "apify": "^3.2.4",
-        "chai": "^4.4.1",
-        "cross-env": "^7.0.3",
-        "eslint": "^8.57.0",
-        "eslint-config-prettier": "^10.0.0",
-        "execa": "^9.3.0",
-        "lint-staged": "^15.2.8",
-        "mock-stdin": "^1.0.0",
-        "oclif": "^4.17.19",
-        "prettier": "^3.3.3",
-        "tsx": "^4.16.5",
-        "typescript": "^5.7.3",
-        "vitest": "^2.1.5"
-    },
-    "oclif": {
-        "bin": "actor",
-        "dirname": "actor-cli",
-        "commands": "./dist/commands",
-        "plugins": [
-            "@oclif/plugin-help"
-        ],
-        "hooks": {
-            "init": [
-                "./dist/hooks/init"
-            ]
-        },
-        "helpClass": "./dist/lib/actor-oclif-help",
-        "additionalHelpFlags": [
-            "-h"
-        ],
-        "additionalVersionFlags": [
-            "-v"
-        ],
-        "topicSeparator": " "
-    },
-    "volta": {
-        "node": "22.13.1",
-        "yarn": "4.6.0"
-    },
-    "packageManager": "yarn@4.6.0",
-    "lint-staged": {
-        "*": "biome format --write --no-errors-on-unmatched",
-        "*.{mjs,js,ts}": "eslint --fix --ext mjs,js,ts",
-        "*.md": "prettier --write"
-    }
+	"name": "actor-cmd",
+	"version": "0.0.1",
+	"description": "Actor command-line interface (CLI) helps you work with the Apify Actors.",
+	"exports": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"type": "module",
+	"scripts": {
+		"dev": "tsx ./bin/dev.js",
+		"test": "vitest run",
+		"test-python": "vitest run -t '.*\\[python\\]'",
+		"lint": "eslint src test .yarn/plugins --ext .ts,.cjs,.mjs",
+		"lint:fix": "eslint src test .yarn/plugins --fix --ext .ts,.cjs,.mjs",
+		"format": "biome format . && prettier --check \"**/*.{md,yml,yaml}\"",
+		"format:fix": "biome format --write . && prettier --write \"**/*.{md,yml,yaml}\"",
+		"clean": "rimraf dist",
+		"build": "yarn clean && tsc && tsc -p tsconfig.typechecking.json",
+		"postpack": "rimraf oclif.manifest.json",
+		"prepack": "yarn build && oclif manifest && oclif readme && yarn update-docs",
+		"update-docs": "oclif readme --readme-path=docs/reference.md",
+		"postinstallDev": "yarn build && node ./bin/run.js check-version"
+	},
+	"files": [
+		"dist",
+		"oclif.manifest.json",
+		"bin"
+	],
+	"bin": {
+		"actor": "./bin/run.js"
+	},
+	"contributors": [
+		"Martin Adámek <martin@apify.com>"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/apify/actor-cmd.git"
+	},
+	"keywords": [
+		"apify",
+		"actor",
+		"client",
+		"node",
+		"command",
+		"line",
+		"bash"
+	],
+	"author": {
+		"name": "Apify",
+		"email": "support@apify.com",
+		"url": "https://apify.com"
+	},
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/apify/actor-cmd/issues"
+	},
+	"homepage": "https://github.com/apify/actor-cmd#readme",
+	"engines": {
+		"node": ">=20"
+	},
+	"dependencies": {
+		"@apify/actor-templates": "^0.1.5",
+		"@apify/consts": "^2.36.0",
+		"@apify/input_schema": "^3.12.0",
+		"@apify/utilities": "^2.12.0",
+		"@crawlee/memory-storage": "^3.12.0",
+		"@oclif/core": "~4.2.0",
+		"@oclif/plugin-help": "~6.2.8",
+		"@root/walk": "~1.1.0",
+		"@sapphire/duration": "^1.1.2",
+		"@sapphire/timestamp": "^1.0.3",
+		"adm-zip": "~0.5.15",
+		"ajv": "~8.17.1",
+		"apify-client": "^2.11.0",
+		"archiver": "~7.0.1",
+		"axios": "~1.7.3",
+		"chalk": "~5.4.0",
+		"cli-table3": "^0.6.5",
+		"computer-name": "~0.1.0",
+		"configparser": "~0.3.10",
+		"cors": "~2.8.5",
+		"detect-indent": "~7.0.1",
+		"escape-string-regexp": "~5.0.0",
+		"express": "~4.21.0",
+		"fs-extra": "^11.2.0",
+		"globby": "~14.0.2",
+		"handlebars": "~4.7.8",
+		"inquirer": "~12.3.0",
+		"is-ci": "~4.1.0",
+		"is-online": "~11.0.0",
+		"istextorbinary": "~9.5.0",
+		"jju": "~1.4.0",
+		"load-json-file": "~7.0.1",
+		"lodash.clonedeep": "^4.5.0",
+		"mime": "~4.0.4",
+		"mixpanel": "~0.18.0",
+		"open": "~10.1.0",
+		"ow": "~2.0.0",
+		"rimraf": "~6.0.1",
+		"semver": "~7.6.3",
+		"tiged": "~2.12.7",
+		"underscore": "~1.13.7",
+		"write-json-file": "~6.0.0"
+	},
+	"devDependencies": {
+		"@apify/eslint-config": "^0.4.0",
+		"@apify/eslint-config-ts": "^0.4.1",
+		"@apify/tsconfig": "^0.1.0",
+		"@biomejs/biome": "^1.8.3",
+		"@crawlee/types": "^3.11.1",
+		"@oclif/test": "^4.0.8",
+		"@sapphire/result": "^2.6.6",
+		"@types/adm-zip": "^0.5.5",
+		"@types/archiver": "^6.0.2",
+		"@types/chai": "^4.3.17",
+		"@types/cors": "^2.8.17",
+		"@types/express": "^4.17.21",
+		"@types/fs-extra": "^11",
+		"@types/inquirer": "^9.0.7",
+		"@types/is-ci": "^3.0.4",
+		"@types/jju": "^1.4.5",
+		"@types/lodash.clonedeep": "^4",
+		"@types/mime": "^4.0.0",
+		"@types/node": "^22.0.0",
+		"@types/semver": "^7.5.8",
+		"@types/underscore": "^1.11.15",
+		"@typescript-eslint/eslint-plugin": "^7.0.2",
+		"@typescript-eslint/parser": "^7.0.2",
+		"@yarnpkg/core": "^4.1.2",
+		"apify": "^3.2.4",
+		"chai": "^4.4.1",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^10.0.0",
+		"execa": "^9.3.0",
+		"lint-staged": "^15.2.8",
+		"mock-stdin": "^1.0.0",
+		"oclif": "^4.17.19",
+		"prettier": "^3.3.3",
+		"tsx": "^4.16.5",
+		"typescript": "^5.7.3",
+		"vitest": "^2.1.5"
+	},
+	"oclif": {
+		"bin": "actor",
+		"dirname": "actor-cmd",
+		"commands": "./dist/commands",
+		"plugins": [
+			"@oclif/plugin-help"
+		],
+		"hooks": {
+			"init": [
+				"./dist/hooks/init"
+			]
+		},
+		"helpClass": "./dist/lib/actor-oclif-help",
+		"additionalHelpFlags": [
+			"-h"
+		],
+		"additionalVersionFlags": [
+			"-v"
+		],
+		"topicSeparator": " "
+	},
+	"volta": {
+		"node": "22.13.1",
+		"yarn": "4.6.0"
+	},
+	"packageManager": "yarn@4.6.0",
+	"lint-staged": {
+		"*": "biome format --write --no-errors-on-unmatched",
+		"*.{mjs,js,ts}": "eslint --fix --ext mjs,js,ts",
+		"*.md": "prettier --write"
+	}
 }

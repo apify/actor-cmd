@@ -233,7 +233,7 @@ export const getLocalConfigOrThrow = async (cwd: string) => {
 				name: 'isConfirm',
 				type: 'confirm',
 
-				message: `The new version of Actor CLI uses the "${LOCAL_CONFIG_PATH}" instead of the "apify.json" file. Since we have found both files in your Actor directory, "apify.json" will be renamed to "apify.json.deprecated". Going forward, all commands will use "${LOCAL_CONFIG_PATH}". You can read about the differences between the old and the new config at https://github.com/apify/actor-cli/blob/master/MIGRATIONS.md. Do you want to continue?`,
+				message: `The new version of Actor CLI uses the "${LOCAL_CONFIG_PATH}" instead of the "apify.json" file. Since we have found both files in your Actor directory, "apify.json" will be renamed to "apify.json.deprecated". Going forward, all commands will use "${LOCAL_CONFIG_PATH}". You can read about the differences between the old and the new config at https://github.com/apify/actor-cmd/blob/master/MIGRATIONS.md. Do you want to continue?`,
 			},
 		]);
 
@@ -269,7 +269,7 @@ export const getLocalConfigOrThrow = async (cwd: string) => {
 		]);
 		if (!answer.isConfirm) {
 			throw new Error(
-				'Command can not run with old apify.json structure. Either let the CLI auto-update it or follow the guide on https://github.com/apify/actor-cli/blob/master/MIGRATIONS.md and update it manually.',
+				'Command can not run with old apify.json structure. Either let the CLI auto-update it or follow the guide on https://github.com/apify/actor-cmd/blob/master/MIGRATIONS.md and update it manually.',
 			);
 		}
 		try {
@@ -292,7 +292,7 @@ export const getLocalConfigOrThrow = async (cwd: string) => {
 			});
 		} catch (e) {
 			throw new Error(
-				`Can not update "${LOCAL_CONFIG_PATH}" structure. Follow guide on https://github.com/apify/actor-cli/blob/master/MIGRATIONS.md and update it manually.`,
+				`Can not update "${LOCAL_CONFIG_PATH}" structure. Follow guide on https://github.com/apify/actor-cmd/blob/master/MIGRATIONS.md and update it manually.`,
 			);
 		}
 	}

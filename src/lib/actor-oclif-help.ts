@@ -19,7 +19,7 @@ export default class ActorOclifHelp extends Help {
 				'TROUBLESHOOTING',
 				this.wrap(
 					'For general support, reach out to us at https://apify.com/contact\n\n' +
-						'If you believe you are encountering a bug, file it at https://github.com/apify/actor-cli/issues/new',
+						'If you believe you are encountering a bug, file it at https://github.com/apify/actor-cmd/issues/new',
 				),
 			),
 		);
