@@ -1,8 +1,8 @@
 import { mkdir } from 'node:fs/promises';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { MockSTDIN } from 'mock-stdin';
+import type { MockSTDIN } from 'mock-stdin';
 
 import { useProcessMock } from './useProcessMock.js';
 import { rimrafPromised } from '../../../src/lib/files.js';
@@ -65,7 +65,7 @@ export function useTempPath(
 
 	return {
 		tmpPath,
-		joinPath: (...paths: string[]) => join(tmpPath, ...paths),
+		joinPath: (...paths: string[]) => resolve(tmpPath, ...paths),
 		joinCwdPath: (...paths: string[]) => join(usedCwd, ...paths),
 		beforeAllCalls: async () => {
 			if (create) {
