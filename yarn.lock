@@ -231,7 +231,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-cloudfront@npm:^3.764.0":
+"@aws-sdk/client-cloudfront@npm:^3.787.0":
   version: 3.787.0
   resolution: "@aws-sdk/client-cloudfront@npm:3.787.0"
   dependencies:
@@ -8592,10 +8592,10 @@ __metadata:
   linkType: hard
 
 "oclif@npm:^4.17.19":
-  version: 4.17.43
-  resolution: "oclif@npm:4.17.43"
+  version: 4.17.44
+  resolution: "oclif@npm:4.17.44"
   dependencies:
-    "@aws-sdk/client-cloudfront": "npm:^3.764.0"
+    "@aws-sdk/client-cloudfront": "npm:^3.787.0"
     "@aws-sdk/client-s3": "npm:^3.782.0"
     "@inquirer/confirm": "npm:^3.1.22"
     "@inquirer/input": "npm:^2.2.4"
@@ -8621,7 +8621,7 @@ __metadata:
     validate-npm-package-name: "npm:^5.0.1"
   bin:
     oclif: bin/run.js
-  checksum: 10c0/cc7571792a13ac7f20765dce36ea6d9fa3cdc5120047f83b26ab2e644f25bffaaa2f250976cc13c72fb4a384e9c13a6d9677c4c5d92c8807845123de4f80a32e
+  checksum: 10c0/ce100603c4e5b288cb4391e13a97a5efb3ecd1f39007457952fd203cda2ff62cd6b1dce94c9445636dd10067413ff381eb1fc3bd7ec3ede8fda2786471e5e0cc
   languageName: node
   linkType: hard
 
