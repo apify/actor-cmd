@@ -1686,7 +1686,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/core@npm:^4, @oclif/core@npm:^4.3.2, @oclif/core@npm:~4.3.0":
+"@oclif/core@npm:^4, @oclif/core@npm:^4.3.2":
   version: 4.3.3
   resolution: "@oclif/core@npm:4.3.3"
   dependencies:
@@ -1709,6 +1709,32 @@ __metadata:
     wordwrap: "npm:^1.0.0"
     wrap-ansi: "npm:^7.0.0"
   checksum: 10c0/d20fd455d9e633955ede49dc98b428cdc0640d4faff28aded626cbd036e3d746a54b945793854f6cb20e6bf4462f421bc6cac90264dc427dfc64a85cbd2d679a
+  languageName: node
+  linkType: hard
+
+"@oclif/core@npm:~4.4.0":
+  version: 4.4.0
+  resolution: "@oclif/core@npm:4.4.0"
+  dependencies:
+    ansi-escapes: "npm:^4.3.2"
+    ansis: "npm:^3.17.0"
+    clean-stack: "npm:^3.0.1"
+    cli-spinners: "npm:^2.9.2"
+    debug: "npm:^4.4.0"
+    ejs: "npm:^3.1.10"
+    get-package-type: "npm:^0.1.0"
+    indent-string: "npm:^4.0.0"
+    is-wsl: "npm:^2.2.0"
+    lilconfig: "npm:^3.1.3"
+    minimatch: "npm:^9.0.5"
+    semver: "npm:^7.6.3"
+    string-width: "npm:^4.2.3"
+    supports-color: "npm:^8"
+    tinyglobby: "npm:^0.2.14"
+    widest-line: "npm:^3.1.0"
+    wordwrap: "npm:^1.0.0"
+    wrap-ansi: "npm:^7.0.0"
+  checksum: 10c0/8100da57d6aeacecbfdb08fb0defb207880fe88ea41fcc2a6e18ddb912a45acf53f40f9024db63222d06826023ecca4fbc40199d4689ac9165483961faa99faa
   languageName: node
   linkType: hard
 
@@ -3537,7 +3563,7 @@ __metadata:
     "@biomejs/biome": "npm:^1.8.3"
     "@crawlee/memory-storage": "npm:^3.12.0"
     "@crawlee/types": "npm:^3.11.1"
-    "@oclif/core": "npm:~4.3.0"
+    "@oclif/core": "npm:~4.4.0"
     "@oclif/plugin-help": "npm:~6.2.8"
     "@oclif/test": "npm:^4.0.8"
     "@root/walk": "npm:~1.1.0"
