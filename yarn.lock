@@ -282,8 +282,8 @@ __metadata:
   linkType: hard
 
 "@aws-sdk/client-s3@npm:^3.787.0":
-  version: 3.830.0
-  resolution: "@aws-sdk/client-s3@npm:3.830.0"
+  version: 3.832.0
+  resolution: "@aws-sdk/client-s3@npm:3.832.0"
   dependencies:
     "@aws-crypto/sha1-browser": "npm:5.2.0"
     "@aws-crypto/sha256-browser": "npm:5.2.0"
@@ -340,8 +340,10 @@ __metadata:
     "@smithy/util-stream": "npm:^4.2.2"
     "@smithy/util-utf8": "npm:^4.0.0"
     "@smithy/util-waiter": "npm:^4.0.5"
+    "@types/uuid": "npm:^9.0.1"
     tslib: "npm:^2.6.2"
-  checksum: 10c0/c2198c55e26f21174d87c20c0a6864dcb7849c4cf52f0a081485340ae6fe9f571957d44c633c6b22c5bb98e9ac6ce6a306b2b299f27bf9f4fb96669870d827d9
+    uuid: "npm:^9.0.1"
+  checksum: 10c0/fc115d6cff56f6cbaf88e6c6d3c9ee57dea449222a96f9acc1397e982799d88303871f11d8d4e422d65ea44fe8dcf3ba96b32c8d5d8d18a1e1b2fd59cfbd73e4
   languageName: node
   linkType: hard
 
@@ -3045,6 +3047,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/uuid@npm:^9.0.1":
+  version: 9.0.8
+  resolution: "@types/uuid@npm:9.0.8"
+  checksum: 10c0/b411b93054cb1d4361919579ef3508a1f12bf15b5fdd97337d3d351bece6c921b52b6daeef89b62340fd73fd60da407878432a1af777f40648cbe53a01723489
+  languageName: node
+  linkType: hard
+
 "@types/wrap-ansi@npm:^3.0.0":
   version: 3.0.0
   resolution: "@types/wrap-ansi@npm:3.0.0"
@@ -5222,9 +5231,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.160":
-  version: 1.5.169
-  resolution: "electron-to-chromium@npm:1.5.169"
-  checksum: 10c0/942b0fe95e05df8ae6c4a76e36a94788659927a9f7d4d718defbfff34153b98e9f9d8e028f424535a578a9775029442c1832ec681a4c0a85fdf76f3fa0360d75
+  version: 1.5.170
+  resolution: "electron-to-chromium@npm:1.5.170"
+  checksum: 10c0/138c6d293b310729f7550f6d36ae4b2bdd0453220e8b11d8780395cf38c9ae816b1f30a3978d790f1951cfa89e7c7911af4a779094c33ae167c89c7ba6751834
   languageName: node
   linkType: hard
 
@@ -10677,10 +10686,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tldts-core@npm:^7.0.8":
-  version: 7.0.8
-  resolution: "tldts-core@npm:7.0.8"
-  checksum: 10c0/d943c9a82e57eced17c1dbb4db7b65b76ec386a8d5d97854fe7592a2561f3870f44524e07f8ffefb48a5160cbd173021245f18eee513197b72232a1e6f3cdfc1
+"tldts-core@npm:^7.0.9":
+  version: 7.0.9
+  resolution: "tldts-core@npm:7.0.9"
+  checksum: 10c0/ff83afc0123fb3cb60036535c8ee5c117393a6fd659d36a247d7b7dface48645cf0b1c89c5223a5d920b41a34a34a2a662086980914ff9db63be37b485626d00
   languageName: node
   linkType: hard
 
@@ -10696,13 +10705,13 @@ __metadata:
   linkType: hard
 
 "tldts@npm:^7.0.0":
-  version: 7.0.8
-  resolution: "tldts@npm:7.0.8"
+  version: 7.0.9
+  resolution: "tldts@npm:7.0.9"
   dependencies:
-    tldts-core: "npm:^7.0.8"
+    tldts-core: "npm:^7.0.9"
   bin:
     tldts: bin/cli.js
-  checksum: 10c0/f42e5d729999f5c674b1f00a3127a08c250cccaff2d76789a64fe7ec149789d1742bfb7d633f9bf3913fdcdc30c4ffe60acf01708bc350f992eafea73bb3d9f3
+  checksum: 10c0/910d121c9c0f3f5a50fd19f1baa430430dac6fb9de389d11ea989526703f66a0f614c65b9b3f1144b3357ba35cedf204e654c88f71a2932409c11aa4401bdcff
   languageName: node
   linkType: hard
 
