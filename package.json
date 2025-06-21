@@ -105,7 +105,7 @@
 		"@apify/eslint-config": "^0.4.0",
 		"@apify/eslint-config-ts": "^0.4.1",
 		"@apify/tsconfig": "^0.1.0",
-		"@biomejs/biome": "^1.8.3",
+		"@biomejs/biome": "^2.0.0",
 		"@crawlee/types": "^3.11.1",
 		"@oclif/test": "^4.0.8",
 		"@sapphire/result": "^2.6.6",
